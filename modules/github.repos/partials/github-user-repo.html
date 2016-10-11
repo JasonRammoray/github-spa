@@ -1,0 +1,105 @@
+<div class="flex-table">
+	<div class="row">
+		<div class="cell-full">
+			<p class="text text-middle" ng-bind-template="Repo #{{ $gitHubRepoCtrl.index }}"></p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Id: </div>
+
+		<div class="cell" ng-bind="$gitHubRepoCtrl.repo.id"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Name: </div>
+
+		<div class="cell" ng-bind="$gitHubRepoCtrl.repo.name"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Full name: </div>
+
+		<div class="cell" ng-bind="$gitHubRepoCtrl.repo.full_name"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Url: </div>
+
+		<div class="cell">
+			<a ng-href="{{ $gitHubRepoCtrl.repo.html_url }}" ng-bind="$gitHubRepoCtrl.repo.html_url" target="_blank"></a>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Is fork: </div>
+
+		<div class="cell" ng-bind-template="{{( $gitHubRepoCtrl.fork ? 'Yes' : 'No' )}}"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Creation date: </div>
+
+		<div class="cell" ng-bind="($gitHubRepoCtrl.repo.created_at | date: 'dd.MM.yyyy')"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Last updated: </div>
+
+		<div class="cell" ng-bind="($gitHubRepoCtrl.repo.updated_at | date: 'dd.MM.yyyy')"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Pushed at: </div>
+
+		<div class="cell" ng-bind="($gitHubRepoCtrl.repo.pushed_at | date: 'dd.MM.yyyy')"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Stars: </div>
+
+		<div class="cell" ng-bind="$gitHubRepoCtrl.repo.stargazers_count"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Programming language: </div>
+
+		<div class="cell" ng-bind="$gitHubRepoCtrl.repo.language"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Description: </div>
+
+		<div class="cell" ng-bind="$gitHubRepoCtrl.repo.description"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Forks: </div>
+
+		<div class="cell" ng-bind="$gitHubRepoCtrl.repo.forks"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Open issues: </div>
+
+		<div class="cell" ng-bind="$gitHubRepoCtrl.repo.open_issues"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Default branch: </div>
+
+		<div class="cell" ng-bind="$gitHubRepoCtrl.repo.default_branch"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell-full text-middle">
+			<button class="btn btn-spartan" ng-click="$gitHubRepoCtrl.forkRepo($gitHubRepoCtrl.repo.owner.login, $gitHubRepoCtrl.repo.name)">Fork a repo</button>
+		</div>
+	</div>
+
+	<div class="rwo">
+		<div class="cell-full text-middle">
+			<pre ng-bind="($gitHubRepoCtrl.feedBack | json)"></pre>
+		</div>
+	</div>
+</div>

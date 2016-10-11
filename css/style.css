@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+.entity-container {
+    display: block;
+}
+
+.content-view {
+    padding: 1.5rem 2rem;
+}
+
+html {
+    font: normal 16px 'Roboto', sans-serif;
+}
+
+.btn {
+    outline: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.btn-spartan {
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #000;
+    color: #000;
+}
+
+.btn-spartan:hover {
+    background: #000;
+    color: #fff;
+}
+
+.text-input {
+    background: none;
+    border: 1px solid #000;
+    font-size: 12px;
+    padding: 7px 15px;
+}
+
+.text-middle {
+    text-align: center;
+}
+
+.pointer-link {
+    display: block;
+    padding: 1.2rem 0;
+}
+
+.text {
+    line-height: 1.5;
+    padding: 10px 0;
+}
+
+.flex-table {
+    margin: 25px 0;
+}
+
+.flex-table .row {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.flex-table .row .cell {
+    flex: 1 1 50%;
+    padding: 1.8rem 1rem;
+}
+
+.cell-full {
+    width: 100%;
+}
+
+.flex-table .row {
+    border-bottom: 1px solid #000;
+}
+
+.flex-table .row .cell:first-child {
+    border-right: 1px solid #000;
+}
+
+.flex-table .row:first-child {
+    border-top: 1px solid #000;
+}
+
+.flex-table .row .cell:nth-child(2) {
+    font-weight: bold;
+}
+
+.image {
+    max-width: 128px;
+    max-height: 128px;
+}
+
+.error-text {
+    color: #f00;
+}
+
+.row .btn {
+    margin: 20px 0;
+}
+
+.row .btn-spartan {
+    padding: 15px 35px;
+}

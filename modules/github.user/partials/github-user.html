@@ -1,0 +1,83 @@
+<p class="text">Enter a gitHub user nickname</p>
+
+<input class="text-input" type="text" ng-model="$gitHubUsrCtrl.userName" />
+
+<button class="btn btn-spartan" ng-click="$gitHubUsrCtrl.fetchUser($gitHubUsrCtrl.userName)">Fetch user</button>
+
+<p class="text error-text" ng-bind="$gitHubUsrCtrl.errMsg" ng-if="!!$gitHubUsrCtrl.errMsg"></p>
+
+<div class="flex-table" ng-if="!!$gitHubUsrCtrl.user && !$gitHubUsrCtrl.errMsg">
+	<div class="row">
+		<div class="cell">Login: </div>
+
+		<div class="cell" ng-bind="$gitHubUsrCtrl.user.login"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Id: </div>
+
+		<div class="cell" ng-bind="$gitHubUsrCtrl.user.id"></div>
+	</div>
+
+	<div class="row" ng-if="!!$gitHubUsrCtrl.user.avatar_url">
+		<div class="cell">Pic: </div>
+
+		<div class="cell">
+			<img class="image" ng-src="{{ $gitHubUsrCtrl.user.avatar_url }}" alt="{{ $gitHubUsrCtrl.userName }}" />
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Type: </div>
+
+		<div class="cell" ng-bind="$gitHubUsrCtrl.user.type"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Name: </div>
+
+		<div class="cell" ng-bind="$gitHubUsrCtrl.user.name"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Company: </div>
+
+		<div class="cell" ng-bind="$gitHubUsrCtrl.user.company"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Location: </div>
+
+		<div class="cell" ng-bind="$gitHubUsrCtrl.user.location"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Bio: </div>
+
+		<div class="cell" ng-bind="$gitHubUsrCtrl.user.bio"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Followers: </div>
+
+		<div class="cell" ng-bind="$gitHubUsrCtrl.user.followers"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Member since: </div>
+
+		<div class="cell" ng-bind="($gitHubUsrCtrl.user.created_at | date: 'dd.MM.yyyy')"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell">Email: </div>
+
+		<div class="cell" ng-bind="$gitHubUsrCtrl.user.email"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell-full text-middle">
+			<a class="pointer-link" ui-sref="repos({userId: $gitHubUsrCtrl.user.login})" ng-bind-template="Take a look at {{ $gitHubUsrCtrl.user.login }} repositories"></a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,23 @@
+{
+  "name": "github-spa",
+  "version": "1.0.0",
+  "description": "A simple client for working with GitHub.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonRammoray/github-spa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasonRammoray/github-spa/issues"
+  },
+  "homepage": "https://github.com/JasonRammoray/github-spa#readme",
+  "dependencies": {
+    "angular": "^1.2.31",
+    "angular-ui-router": "^0.3.1"
+  }
+}

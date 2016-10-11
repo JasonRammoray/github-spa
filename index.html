@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="gitHub" ng-strict-di>
+	<head>
+		<meta charset="UTF-8" />
+
+		<title>GitHub spa</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" />
+	</head>
+
+	<body>
+		<ui-view class="entity-container content-view"></ui-view>
+
+		<!-- Angular -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+		<!-- Angular ui router -->
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+
+		<!-- GitHub module -->
+
+		<script src="modules/github/github.js"></script>
+
+		<script src="modules/github/providers/github.js"></script>
+
+		<script src="modules/github/providers/credentials.js"></script>
+
+		<!-- GitHub user module -->
+
+		<script src="modules/github.user/github.user.js"></script>
+
+		<script src="modules/github.user/controllers/github-user-controller.js"></script>
+
+		<script src="modules/github.user/directives/github-user.js"></script>
+
+		<!-- GitHub repos module -->
+
+		<script src="modules/github.repos/github.repos.js"></script>
+
+		<script src="modules/github.repos/controllers/github-user-repos-controller.js"></script>
+
+		<script src="modules/github.repos/controllers/github-user-repo-controller.js"></script>
+
+		<script src="modules/github.repos/directives/github-user-repos.js"></script>
+
+		<script src="modules/github.repos/directives/github-user-repo.js"></script>
+	</body>
+</html>

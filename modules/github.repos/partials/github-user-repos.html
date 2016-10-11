@@ -1,0 +1,13 @@
+<a class="pointer-link" ui-sref="user">Back to the user screen</a>
+
+<div ng-if="!!$gitHubReposCtrl.repos && $gitHubReposCtrl.repos.length">
+	<p class="text" ng-bind-template="Total repos: {{ $gitHubReposCtrl.repos.length }}"></p>
+
+	<p class="text">Filter repos:</p>
+
+	<input class="text-input" type="text" ng-model="$gitHubReposCtrl.query" />
+</div>
+
+<git-hub-user-repo ng-repeat="repo in $gitHubReposCtrl.repos | filter: $gitHubReposCtrl.query" repo="repo" index="{{ $index + 1 }}"></git-hub-user-repo>
+
+<a class="pointer-link" ui-sref="user">Back to the user screen</a>
