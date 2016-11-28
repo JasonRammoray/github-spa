@@ -3,7 +3,7 @@
 
 	describe('Tests suite for GitHub user controller', function() {
 		beforeEach(function() {
-			angular.mock.module('gitHub.user', 'gitHub', 'gitHub.repos', 'ui.router');
+			angular.mock.module('gitHub.user', 'gitHub', 'ui.router');
 		});
 
 		var $rootScope,
@@ -23,13 +23,13 @@
 
 			_$httpBackend_,
 
-		  _$log_,
+			_$log_,
 
-		  _$controller_,
+			_$controller_,
 
-		  _gitHub_,
+			_gitHub_,
 
-		  _$q_
+			_$q_
 		) {
 			$rootScope = _$rootScope_;
 
