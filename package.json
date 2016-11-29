@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/JasonRammoray/github-spa#readme",
   "dependencies": {
-    "angular": "^1.2.31",
-    "angular-ui-router": "^0.3.1"
+    "angular": "^1.5.9",
+    "angular-ui-router": "^0.3.2"
   }
 }
