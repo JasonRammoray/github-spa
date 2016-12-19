@@ -169,7 +169,7 @@
 
 			spyOn(credentials, 'fetchCredentials').and.returnValue(deferred.promise);
 
-			gitHub.createRepoFork('some user', 'some repo');
+			gitHub.createRepoFork('some user', 'some repo').then(angular.noop, angular.noop);
 
 			$rootScope.$digest();
 

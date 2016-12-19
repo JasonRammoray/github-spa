@@ -7,9 +7,9 @@ module.exports = function(gulp) {
 		new KarmaServer({
 			configFile: path.join(__dirname, '..', 'karma.conf.js'),
 
-			singleRun: false,
+			singleRun: true,
 
-			autoWatch: true
+			autoWatch: false
 		}, function() {
 			done();
 		})

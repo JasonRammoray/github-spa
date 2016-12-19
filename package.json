@@ -4,7 +4,7 @@
   "description": "A simple client for working with GitHub.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "unit": "gulp unit"
   },
   "repository": {
     "type": "git",
