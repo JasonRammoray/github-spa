@@ -57,7 +57,7 @@ module.exports = function(config) {
 
       // Tests
 
-      './tests/**/*.spec.js'
+      './tests/unit/**/*.spec.js'
     ],
 
 
