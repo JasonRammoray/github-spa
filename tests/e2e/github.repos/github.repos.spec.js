@@ -30,9 +30,9 @@ describe('Tests suite for the page with GitHub user repos list', function() {
 
 		repoPageUrl = getUserReposUrl(gitHubUserName);
 
-		userRepoListLength = 9;
+		userRepoListLength = 8;
 
-		uniqueRepoName = 'am-demo-app';
+		uniqueRepoName = 'github-spa';
 	});
 
 	it('User should see all repositories of a certain GitHub user', function(done) {
